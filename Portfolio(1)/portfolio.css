@@ -1,0 +1,725 @@
+/*this are for everything*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+  body{
+    font-family: "Montserrat",sans-serif;
+    line-height: 1.5;
+    user-select: none;
+  }
+  /*this is for the general button*/
+  .btn-primary {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    border-radius: 0.1rem;
+    background: #480ca8;
+    color: #ffffff;
+    cursor: pointer;
+    transform: all 400ms ease;
+    /*hover*/
+  }
+  .btn-primary  a{
+    color: #ffffff;
+  }
+  .btn-primary:hover {
+    background: #580fce;
+    box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+  }
+  .btn-black {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    border-radius: 0.1rem;
+    background: #000;
+    color: #ffffff;
+    cursor: pointer;
+    transform: all 400ms ease;
+    /*hover*/
+  }
+  .btn-black  a{
+    color: #ffffff;
+  }
+  .btn-black:hover {
+    background: rgba(0, 0, 0, 0.829);
+    box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+  }
+  /*styling the header*/
+  header{
+    overflow: hidden;
+  }
+  /*adding the circle*/
+  header::after{
+    content: "";
+    width: 90%;
+    height: 90%;
+    background-color: #480ca8;
+    position: absolute;
+    /*to draw the circle*/
+    clip-path: circle(65% at right 115%);
+    z-index: -100;
+    right: 0%;
+    transform: translateY(-100%);
+}
+  /*styling the navbar */
+  nav{
+    background: linear-gradient(rgba(70, 70, 70, 0.514),rgb(255, 255, 255));
+    position: fixed;
+    align-items: center;
+    padding: 1rem 5rem 0.6rem 8rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    /*to make it to the center we add
+    place-items: center;*/
+  }
+  /*we add this class in order to make make the nav position :fixed*/
+  .nav-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  /*styling the logo*/
+  nav h2 a{
+    color: #1B2430;
+  }
+  /*styling the side bar of the navbar*/
+  nav ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  nav ul li a{
+    color: black;
+    transition: 700ms;
+  }
+  nav ul li a:hover{
+    background: #580fce;
+    color: #ffffff;
+    padding: 0.3rem;
+    border-radius: 15px;
+  }
+  /*hide these buttons on large screen*/
+  .close-btn{
+    display: none;
+  }
+
+  /*styling the content the main page*/
+  #content{
+    margin-top: 250px;/*according to the image*/
+    padding: 0 100px;
+    display: flex;
+    gap: 6rem;
+  }
+  /*styling the part of the text*/
+  #content .text-content{
+    width: 35%;
+  }
+  #content .text-content h3{
+    color: #580fce;
+    font-size: 24px;
+  }
+  #content .text-content h1{
+    font-size: 45px;
+  }
+  #content .text-content button{
+    margin-top: 15px;
+  }
+  #content .text-content button h3{
+    color: #fff;
+    font-size: 16px;
+  }
+  .info{
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+  }
+  /*styling the part of the image*/
+  .image-content{
+    width: 100%;
+  }
+  /*styling the part of the social media*/
+  .social_media{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .social_media a img{
+    width: 35px;
+    transition: 400ms;
+  }
+  .social_media a img:hover{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.4rem;
+  }
+  
+  /*styling the part of the companies*/
+  .companies{
+    background: rgba(167, 170, 166, 0.174);
+    display: flex;
+    padding: 0px 100px;
+    gap: 3rem;
+    align-items: center;
+  }
+  .companies article img{
+    width: 80%;
+    height: fit-content;
+  }
+  /*styling the part of the description */
+  #function{
+    padding: 50px 70px;
+    display: flex;
+    gap: 3rem;
+    color: #fff;
+  }
+  /*styling the first part which is the card*/
+  #function .card{
+    width: 20%;
+    background: #580fcec4;
+    padding: 1rem;
+  }
+  #function .card h1{
+    font-size: 100px;
+  }
+  #function .card h2{
+    margin-bottom: 15px;
+  }
+  #function .card p{
+    margin-bottom: 15px;
+  }
+  #function .description{
+    width: 62%;
+  }
+  #function .description h3{
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 45px;
+  }
+  /*styling the second part which is the boxes*/
+  #function .description .boxes{
+    display: grid;
+    color: #000;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+  #function .description .boxes .box{
+    background:rgba(167, 170, 166, 0.174);
+    padding: 1rem;
+    transition: 400ms;
+    cursor: pointer;
+  }
+  #function .description .boxes .box:hover{
+    background: #580fcec4 ;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.345);
+  }
+  #function .description .boxes .box span{
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  #function .description .boxes .box .discover a{
+    display: grid;
+    width: fit-content;
+    color: rgba(59, 53, 53, 0.648);
+    font-weight:700;
+    transition: 400ms;
+  }
+  #function .description .boxes .box:hover .discover a{
+    color: #000 ;
+    font-size: 20px;
+  }
+
+  /*styling the part of our work*/
+  #our-work{
+    padding: 70px 100px 50px;
+    background: rgba(167, 170, 166, 0.174);
+  }
+  /*styling the text content*/
+  #our-work .text-content{
+    display: flex;
+    gap: 25rem;
+    margin-bottom: 45px;
+  }
+  #our-work .text-content h2{
+    font-size: 30px;
+  }
+  #our-work .text-content .info{
+    display: block;
+  }
+  #our-work .text-content .info p{
+    margin-bottom: 20px;
+  }
+  #our-work .text-content .info .explore a{
+    display: flex;
+    gap: 1rem;
+    color: #000;
+    transition: 400ms;
+  }
+  #our-work .text-content .info .explore a:hover{
+    color: #580fcec4 ;
+    margin-left: 1rem;
+  }
+  /*styling the image content*/
+  #our-work .images-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  #our-work .images-content .box img{
+    width: 100%;
+    border: 15px solid #fff;
+    box-shadow: 0.5rem 0.5rem 1rem #000;
+    margin-bottom: 20px;
+    transition: 400ms;    
+  }
+  #our-work .images-content .box img:hover{
+    box-shadow: none;
+    /*==================================this is used to show the whole project======================================*/
+    /*
+    transform:0;
+    transition:all 5s ease;
+    
+    */
+  }
+  #our-work .images-content .box .button{
+    display: flex;
+    gap: 1rem;
+  }
+
+  /*styling the part of testimonials*/
+  .testimonials{
+    padding: 50px 100px;
+    text-align: center;
+  }
+  /*styling the title*/
+  .testimonials h2{
+    font-size: 35px;
+  }
+  /*styling boxes which contain opinion of persons*/
+  .testimonials .boxes{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  /*styling every box*/
+  .testimonials .boxes .box{
+    background: rgba(167, 170, 166, 0.174) ;
+    padding: 2rem;
+    text-align: left;
+    transition: 400ms;
+  }
+  .testimonials .boxes .box:hover{
+    background: transparent;
+    border-color: #1e5afa;
+    box-shadow: 0rem 0rem   1rem #575757;
+    z-index: 1;
+  }
+  .testimonials .boxes .box p{
+    margin-bottom: 10px;
+  }
+  
+  
+  .testimonials .boxes .box .information .image img{
+    border: 1.8px solid purple;
+    border-radius: 50%;
+    width: 17%;
+    margin-bottom: 2px;
+    margin-right: 0;
+    padding-right: 0;
+}
+.testimonials .boxes .box .information .text h3{
+  font-weight: 500;
+}
+.testimonials .boxes .box .information .text h5{
+  font-weight: 100;
+}
+
+/*styling the contact page*/
+#talk{
+  background: #580fcec4;
+  padding:110px 120px 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/*styling the text content*/
+#talk .text-content{
+  color: #fff;
+}
+#talk .text-content h2{
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+#talk .text-content  .social{
+  margin-top: 15px;
+  display: flex;
+  gap: 1rem;
+}
+#talk .text-content  .social a {
+  transition: 400ms;
+  color: rgba(0, 0, 0, 0.689);
+}
+
+#talk .text-content  .social a:hover{
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+/*styling the form contact*/
+#talk .contact form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/*styling input and textarea*/
+#talk .contact form input,#talk .contact form  textarea{
+  padding: 1rem;
+}
+#talk .contact form .btn-black span{
+  font-size: 18px;
+}
+/*styling the copyright*/
+.footer{
+  text-align: center;
+  background: #580fcec4;
+  color: #fff;
+  padding-top: 5px;
+  border-top: 1px solid black;
+}
+/*media query for tablette*/
+  @media screen and (max-width:1024px){
+    nav{
+        padding: 1rem 1rem 0.6rem 1.5rem;
+    }
+    header::after{
+      display: block;
+    }
+    #function{
+      padding: 50px 20px;
+      gap: 1rem;
+    }
+    #function .card{
+      width: 35%;
+    }
+    #function .description{
+      width: 60%;
+    }
+    #our-work{
+      padding: 70px 35px 50px;
+      background: rgba(167, 170, 166, 0.174);
+    }
+    #our-work .text-content{
+      gap: 20rem;
+    }
+    #our-work .images-content{
+      width: 100%;
+    }
+  }
+
+
+/*media query for phone*/
+@media screen and (max-width:850px){
+  nav{
+    padding: 1rem 1rem 0.6rem 1.5rem;
+  }
+  /*make change on the sidebar of the navbar*/
+  nav ul{
+    position: fixed;
+    top: 3.85rem;
+    right: 10%;
+    height: fit-content;
+    width: 15rem;
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+    z-index: 100;
+    perspective: 300px;
+    display:none
+  }
+  /*show the clos-open buttons*/
+  .close-btn{
+    display: block;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  /*hide the close button */
+  .close-btn .close{
+    display: none;
+  }
+  /*make some changes of the content of the list*/
+  nav  ul li{
+    width: 100%;
+    height: 4.5rem;
+    /*this is for animations as it is showd*/
+    animation: animatNavItems 300ms  forwards;
+    transform-origin: top right;
+    opacity: 0;
+    
+    }
+    nav  li:nth-child(2){
+       animation-delay: 200ms;
+    }
+    nav  ul li:nth-child(3){
+       animation-delay: 400ms;
+    }
+    nav  ul li:nth-child(4){
+        animation-delay: 600ms;
+    }
+    /*this is used for animations*/
+    @keyframes animatNavItems{
+        0%{
+            transform:rotateX(90deg) ;
+        }
+        100%{
+            transform: rotateX(0) ;
+            opacity: 1;
+        }
+    }
+    /*this is for the content of the sidebar of the navbar*/
+    nav ul li a{
+        background: #4cc9f0;
+        box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;  
+        place-items: center;  
+    }
+    nav ul li a:hover{
+        background: #1e5afa;
+        border-radius: 0%;
+    }
+    /*this is used to style the button of the navbar*/
+    nav ul .btn-primary{
+        box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+        width: 100%;
+        height: 4.5rem;
+        display:flex;  
+        gap: 1rem;
+        padding: 0.75rem 3rem;
+        place-items: center; 
+        border-radius: 0%;
+        animation: animatNavItems 800ms  forwards;
+        transform-origin: top right;
+    }
+    /*make some changes on the content*/
+    #content{
+      padding: 0 40px;
+      display: flex;
+      margin-top:70px;/*according to the image*/
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+    /*make changes on the cercle*/
+    header::after{
+      /*to draw the circle*/
+      clip-path: circle(55% at bottom );
+      width: 100%;
+    }
+  /*make some changes on the text content*/
+  #content .text-content{
+    width: 100%;
+  }
+  /*make some changes on the social-media and pictures*/
+  .info{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+  .info .image-content{
+    width: 80%;
+  }
+  .info .social_media{
+    margin-bottom: 15px;
+  }
+  #function .description{
+    width: 70%;
+  }
+  #our-work .text-content{
+    gap: 14.8rem;
+  }
+  #our-work{
+    padding: 70px 35px 50px;
+    background: rgba(167, 170, 166, 0.174);
+  }
+  #our-work .images-content{
+    grid-template-columns: 1fr;
+  }
+  .testimonials{
+    padding: 50px 50px;
+    text-align: center;
+  }
+  /*styling every box*/
+  .testimonials .boxes .box{
+    background: rgba(167, 170, 166, 0.174) ;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .testimonials .boxes .box .information .image img{
+    width: 28%;
+}
+}
+@media screen and (max-width:760px){
+  #function{
+    padding: 50px 20px;
+    text-align: center;
+    gap: 1rem;
+  }
+  #function .card{
+    display: none;
+  }
+  #function .description{
+    width: 100%;
+  }
+  #function .description .boxes .box .discover a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+  }
+  #our-work .text-content{
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  #our-work .text-content .info .explore a{
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+  }
+  
+/*styling the contact page*/
+#talk{
+  padding:110px 120px 90px;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/*styling the form contact*/
+#talk .contact form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+/*styling input and textarea*/
+#talk .contact form input,#talk .contact form  textarea{
+  width: 100%;
+}
+#talk .contact form .btn-black span{
+  font-size: 18px;
+}
+  
+}
+/*media query for small phone*/
+@media screen and (max-width:640px){
+  /*make changes on the close-open button*/
+    .close-btn{
+        display: block;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .companies{
+      gap: 2rem;
+    }
+    .companies article img{
+        width: 100%;
+    }
+}
+@media screen and (max-width:610px){
+  #function .description .boxes{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .testimonials .boxes{
+    grid-template-columns: 1fr;
+  }
+  .testimonials .boxes .box .information {
+    width: 100%;
+    text-align: center;
+}
+#talk{
+  padding:110px 50px 90px;
+}
+#talk .text-content{
+  width: 100%;
+  text-align: center;
+}
+#talk .text-content  .social{
+  margin-top: 15px;
+  display: flex;
+}
+#talk .text-content  .social a {
+  transition: 400ms;
+  width: 100%;
+}
+
+#talk .text-content  .social a:hover{
+  background: none;
+}
+@media screen and (max-width:430px){
+  /*make some changes on the content*/
+  #content{
+    padding: 0px;
+  }
+  /*make some changes on the social-media and pictures*/
+  .info{
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-end;
+  }
+  .info .image-content{
+    width: 71.5%;
+  }
+  .companies{
+    gap: 1rem;
+  }
+  .companies article{
+    width: 100%;
+  } 
+  #talk{
+    padding:110px 50px 90px;
+  }
+  #talk .text-content{
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width:320px){
+  /*make some changes on the social-media and pictures*/
+  .info .image-content{
+    padding: 0;
+    margin-left: 16.5px;
+  }
+  .info .social_media{
+    display: none;
+  }
+  .companies{
+    gap: 0.4rem;
+  }
+}
