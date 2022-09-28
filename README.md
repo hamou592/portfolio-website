@@ -1,1 +1,3 @@
 # portfolio-website
+This is a portfolio website created using html css javascript which is full responsive for all devices (mobile-desktop-tablettes) ,this website has 3 main section : 1.Navbar : This section has a small name of the website and the menu as a navbar and when we click on every element of this menu it goes us to its the specific section and also a button to download a cv.
+. 2.Main : This section has the content of the website wich is :a brief description of his work and has links to his acounts on social media ,companies in which he worked before,his field and functionalitied in work, previous projects,clients testimonials,a form to send him a message,part of copyrights.
